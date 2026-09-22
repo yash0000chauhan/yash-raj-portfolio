@@ -51,4 +51,31 @@ MarketEZ is listed with only the verified category. Add case-study fields in `pr
 
 ## Deploy
 
-The app is a standard Next.js App Router project and can be deployed on Vercel as-is. Set the env vars above on the host. `src/app/sitemap.ts` and `src/app/robots.ts` are generated at build time from `NEXT_PUBLIC_SITE_URL`.
+GitHub: [https://github.com/yash0000chauhan/yash-raj-portfolio](https://github.com/yash0000chauhan/yash-raj-portfolio)
+
+This is a standard Next.js App Router app. Vercel detects it automatically. **No secrets are required to go live.** The contact form already falls back to LinkedIn / mailto when email env vars are empty. Do not invent an email or commit `.env` files.
+
+### Push this repo (if the remote is still empty)
+
+```bash
+git remote add github https://github.com/yash0000chauhan/yash-raj-portfolio.git
+git push -u github HEAD:main
+```
+
+### Vercel (exact steps)
+
+1. Open [vercel.com/new](https://vercel.com/new) and sign in with the GitHub account that owns `yash0000chauhan/yash-raj-portfolio`.
+2. Import **yash0000chauhan/yash-raj-portfolio**.
+3. Leave the defaults:
+   - Framework Preset: **Next.js**
+   - Root Directory: `./`
+   - Build Command: `next build`
+   - Output: Next.js default (do not set a static export)
+4. Environment variables — all optional:
+   - `NEXT_PUBLIC_SITE_URL` — set this to the production URL **after** the first deploy (example: `https://yash-raj-portfolio.vercel.app`), then redeploy so sitemap, robots, and Open Graph use it.
+   - `NEXT_PUBLIC_CONTACT_EMAIL` / `CONTACT_EMAIL` — only if you have a real public inbox.
+   - `RESEND_API_KEY` / `CONTACT_FROM_EMAIL` — only if you want the API to send mail. Leave blank otherwise.
+5. Click **Deploy**.
+6. After the first URL exists, set `NEXT_PUBLIC_SITE_URL` to that URL and Redeploy.
+
+Do not add placeholder emails, API keys, or analytics IDs. Contact works without them.
