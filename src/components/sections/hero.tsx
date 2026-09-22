@@ -42,7 +42,7 @@ export function Hero() {
             initial={reduced ? false : { opacity: 1, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.04 }}
-            className="mt-3 text-sm text-zinc-400"
+            className="mt-3 text-sm text-zinc-300"
           >
             {site.tagline}
           </motion.p>
@@ -50,7 +50,7 @@ export function Hero() {
             initial={reduced ? false : { opacity: 1, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.06 }}
-            className="font-heading mt-5 max-w-xl text-[2.1rem] leading-[1.12] text-balance text-zinc-50 sm:text-5xl lg:text-[3.35rem]"
+            className="mt-5 max-w-xl text-[2.05rem] leading-[1.2] font-semibold tracking-[-0.02em] text-pretty text-zinc-50 sm:text-5xl lg:text-[3.05rem]"
           >
             {site.headline}
           </motion.h1>
@@ -58,11 +58,13 @@ export function Hero() {
             initial={reduced ? false : { opacity: 1, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.1 }}
-            className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg"
+            className="mt-6 max-w-xl text-base leading-relaxed text-zinc-300 sm:text-lg"
           >
             {site.description}
           </motion.p>
-          <p className="mt-4 max-w-xl text-sm text-zinc-500">{site.secondary}</p>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-zinc-400">
+            {site.secondary}
+          </p>
           <motion.div
             initial={reduced ? false : { opacity: 1, y: 10 }}
             animate={{ opacity: 1, y: 0 }}

@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 
 import { ProjectCaseStudy } from "@/components/projects/project-case-study";
+import { ArchitectureFlow } from "@/components/visuals/architecture-flow";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -33,15 +34,13 @@ export function ProjectCard({ project }: { project: Project }) {
             {project.category}
           </p>
         </div>
-        <h3 className="mt-4 text-xl text-zinc-50 sm:text-2xl">{project.title}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+        <h3 className="mt-4 text-xl font-semibold tracking-[-0.02em] text-zinc-50 sm:text-2xl">
+          {project.title}
+        </h3>
+        <p className="mt-3 text-sm leading-relaxed text-zinc-300">
           {project.summary}
         </p>
-        {project.architecture.length > 0 ? (
-          <p className="mt-5 font-mono text-[11px] leading-relaxed text-zinc-500">
-            {project.architecture.join(" → ")}
-          </p>
-        ) : null}
+        <ArchitectureFlow steps={project.architecture} />
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <Button
             type="button"

@@ -17,7 +17,7 @@ export function Services() {
             <Reveal key={service.id} delay={index * 0.03}>
               <article className="h-full rounded-3xl border border-white/8 bg-white/[0.03] p-5">
                 <h3 className="text-base text-zinc-50">{service.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                <p className="mt-2 text-sm leading-relaxed text-zinc-300">
                   {service.description}
                 </p>
               </article>

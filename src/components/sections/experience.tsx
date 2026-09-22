@@ -1,4 +1,5 @@
 import { Reveal, SectionHeading } from "@/components/reveal";
+import { ArchitectureFlow } from "@/components/visuals/architecture-flow";
 import { experience } from "@/content/experience";
 import { cn } from "@/lib/utils";
 
@@ -28,19 +29,21 @@ export function Experience() {
                 />
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
-                    <h3 className="text-lg text-zinc-50">{item.role}</h3>
-                    <p className="mt-1 text-sm text-zinc-400">
+                    <h3 className="text-lg font-semibold tracking-[-0.02em] text-zinc-50">
+                      {item.role}
+                    </h3>
+                    <p className="mt-1 text-sm text-zinc-300">
                       {item.organization}
                     </p>
                   </div>
-                  <p className="font-mono text-[11px] tracking-wide text-zinc-500">
+                  <p className="font-mono text-[11px] tracking-wide text-zinc-400">
                     {[item.period, item.location].filter(Boolean).join(" · ")}
                   </p>
                 </div>
-                <p className="mt-4 text-sm leading-relaxed text-zinc-400">
+                <p className="mt-4 text-sm leading-relaxed text-zinc-300">
                   {item.summary}
                 </p>
-                <ul className="mt-4 space-y-2 text-sm text-zinc-400">
+                <ul className="mt-4 space-y-2 text-sm text-zinc-300">
                   {item.highlights.map((highlight) => (
                     <li key={highlight} className="flex gap-2">
                       <span className="mt-2 size-1 shrink-0 rounded-full bg-sky-300/70" />
@@ -49,9 +52,7 @@ export function Experience() {
                   ))}
                 </ul>
                 {item.architecture ? (
-                  <p className="mt-4 font-mono text-[11px] leading-relaxed text-zinc-500">
-                    {item.architecture.join(" → ")}
-                  </p>
+                  <ArchitectureFlow steps={item.architecture} />
                 ) : null}
                 <ul className="mt-4 flex flex-wrap gap-1.5">
                   {item.tech.map((tech) => (

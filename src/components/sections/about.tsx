@@ -7,7 +7,7 @@ export function About() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading eyebrow={about.eyebrow} title={about.title} />
         <div className="mt-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="space-y-5 text-base leading-relaxed text-zinc-400">
+          <div className="space-y-5 text-base leading-relaxed text-zinc-300">
             {about.body.map((paragraph) => (
               <Reveal key={paragraph}>
                 <p>{paragraph}</p>
@@ -35,7 +35,7 @@ export function About() {
                 <h3 className="text-sm font-medium text-zinc-100">
                   {role.title}
                 </h3>
-                <p className="mt-1 text-sm leading-relaxed text-zinc-500">
+                <p className="mt-1 text-sm leading-relaxed text-zinc-400">
                   {role.detail}
                 </p>
               </article>

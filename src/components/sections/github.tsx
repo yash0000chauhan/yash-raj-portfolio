@@ -31,7 +31,7 @@ export function GithubSection() {
                   {repo.language}
                 </p>
                 <h3 className="mt-2 text-base text-zinc-50">{repo.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                <p className="mt-2 text-sm leading-relaxed text-zinc-300">
                   {repo.summary}
                 </p>
                 <a

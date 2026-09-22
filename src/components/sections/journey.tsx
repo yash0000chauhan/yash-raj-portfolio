@@ -17,7 +17,7 @@ export function Journey() {
                   {String(index + 1).padStart(2, "0")}
                 </p>
                 <h3 className="mt-3 text-base text-zinc-50">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                <p className="mt-2 text-sm leading-relaxed text-zinc-300">
                   {step.description}
                 </p>
               </article>

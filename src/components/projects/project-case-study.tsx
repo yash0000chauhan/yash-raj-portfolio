@@ -2,16 +2,17 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
+import { ArchitectureFlow } from "@/components/visuals/architecture-flow";
 import type { Project } from "@/content/projects";
 
 function Block({ title, body }: { title: string; body?: string }) {
   if (!body) return null;
   return (
     <section className="space-y-2">
-      <h3 className="text-[11px] tracking-[0.22em] text-sky-300/80 uppercase">
+      <h3 className="text-xs font-medium tracking-[0.18em] text-sky-300 uppercase">
         {title}
       </h3>
-      <p className="text-sm leading-relaxed text-zinc-400">{body}</p>
+      <p className="text-sm leading-relaxed text-zinc-300">{body}</p>
     </section>
   );
 }
@@ -29,10 +30,10 @@ export function ProjectCaseStudy({
         <p className="font-mono text-[11px] text-zinc-500">
           {project.number} · {project.category}
         </p>
-        <h2 className="font-heading text-2xl text-zinc-50 sm:text-3xl">
+        <h2 className="text-2xl font-semibold tracking-[-0.02em] text-zinc-50 sm:text-3xl">
           {project.title}
         </h2>
-        <p className="text-sm leading-relaxed text-zinc-400">
+        <p className="text-sm leading-relaxed text-zinc-300">
           {project.summary}
         </p>
       </header>
@@ -50,12 +51,10 @@ export function ProjectCaseStudy({
 
       {project.architecture.length > 0 ? (
         <section>
-          <h3 className="text-[11px] tracking-[0.22em] text-sky-300/80 uppercase">
+          <h3 className="text-xs font-medium tracking-[0.18em] text-sky-300 uppercase">
             Architecture
           </h3>
-          <p className="mt-2 font-mono text-xs leading-relaxed text-zinc-400">
-            {project.architecture.join(" → ")}
-          </p>
+          <ArchitectureFlow steps={project.architecture} className="mt-3" />
         </section>
       ) : null}
 

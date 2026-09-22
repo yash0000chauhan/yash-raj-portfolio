@@ -128,7 +128,7 @@ export function Contact() {
               </div>
             ) : (
               <div className="rounded-3xl border border-white/8 bg-white/[0.03] p-5">
-                <p className="text-sm leading-relaxed text-zinc-400">
+                <p className="text-sm leading-relaxed text-zinc-300">
                   A public email is not configured in this environment. Use the
                   form (mailto fallback), or write on{" "}
                   <a
