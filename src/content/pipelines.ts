@@ -2,31 +2,41 @@ export const heroPipeline = [
   {
     id: "user-data",
     label: "USER / DATA",
-    detail: "The source of truth — people, documents, images, events, and product signals.",
+    short: "DATA",
+    detail:
+      "The source of truth — people, documents, images, events, and product signals.",
   },
   {
     id: "ai-pipeline",
     label: "AI PIPELINE",
-    detail: "Ingestion, cleaning, and orchestration that make raw input usable by models.",
+    short: "PIPE",
+    detail:
+      "Ingestion, cleaning, and orchestration that make raw input usable by models.",
   },
   {
     id: "retrieval",
     label: "RETRIEVAL / VISION / NLP",
-    detail: "Search, perception, and language understanding before generation starts.",
+    short: "SEE",
+    detail:
+      "Search, perception, and language understanding before generation starts.",
   },
   {
     id: "llm",
     label: "LLM / MODEL",
-    detail: "The reasoning or prediction layer — language, vision, or a task-specific model.",
+    short: "LLM",
+    detail:
+      "The reasoning or prediction layer — language, vision, or a task-specific model.",
   },
   {
     id: "agent",
     label: "AGENT / AUTOMATION",
+    short: "AGENT",
     detail: "Tools, loops, and workflows that turn a model output into an action.",
   },
   {
     id: "production",
     label: "PRODUCTION APP",
+    short: "APP",
     detail: "APIs, interfaces, and monitoring — the system people actually use.",
   },
 ] as const;
