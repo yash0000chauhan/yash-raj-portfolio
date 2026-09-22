@@ -28,7 +28,7 @@ export function Reveal({
   return (
     <Component
       className={className}
-      initial={{ opacity: 0, y: 28 }}
+      initial={{ opacity: 0.2, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10% 0px" }}
       transition={{

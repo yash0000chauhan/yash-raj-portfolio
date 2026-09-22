@@ -121,6 +121,7 @@ export function Navbar() {
                   {site.nav.map((item) => (
                     <SheetClose
                       key={item.id}
+                      nativeButton={false}
                       render={
                         <a
                           href={item.href}

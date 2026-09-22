@@ -31,42 +31,42 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <div>
           <motion.p
-            initial={reduced ? false : { opacity: 0, y: 12 }}
+            initial={reduced ? false : { opacity: 1, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
             className="text-[11px] tracking-[0.32em] text-sky-300/85 uppercase"
           >
             {site.title}
           </motion.p>
           <motion.p
-            initial={reduced ? false : { opacity: 0, y: 12 }}
+            initial={reduced ? false : { opacity: 1, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.05 }}
+            transition={{ duration: 0.5, delay: 0.04 }}
             className="mt-3 text-sm text-zinc-400"
           >
             {site.tagline}
           </motion.p>
           <motion.h1
-            initial={reduced ? false : { opacity: 0, y: 18 }}
+            initial={reduced ? false : { opacity: 1, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+            transition={{ duration: 0.55, delay: 0.06 }}
             className="font-heading mt-5 max-w-xl text-[2.1rem] leading-[1.12] text-balance text-zinc-50 sm:text-5xl lg:text-[3.35rem]"
           >
             {site.headline}
           </motion.h1>
           <motion.p
-            initial={reduced ? false : { opacity: 0, y: 18 }}
+            initial={reduced ? false : { opacity: 1, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.18 }}
+            transition={{ duration: 0.55, delay: 0.1 }}
             className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg"
           >
             {site.description}
           </motion.p>
           <p className="mt-4 max-w-xl text-sm text-zinc-500">{site.secondary}</p>
           <motion.div
-            initial={reduced ? false : { opacity: 0, y: 16 }}
+            initial={reduced ? false : { opacity: 1, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.24 }}
+            transition={{ duration: 0.5, delay: 0.12 }}
             className="mt-8 flex flex-col gap-3 sm:flex-row"
           >
             <Button
