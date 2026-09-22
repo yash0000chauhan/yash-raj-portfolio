@@ -9,6 +9,14 @@ import { absoluteUrl } from "@/lib/seo";
 
 import "./globals.css";
 
+function metadataBaseUrl() {
+  try {
+    return new URL(siteUrl);
+  } catch {
+    return new URL("https://yash-raj-portfolio.vercel.app");
+  }
+}
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,7 +30,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: metadataBaseUrl(),
   title: {
     default: site.seo.title,
     template: site.seo.titleTemplate,

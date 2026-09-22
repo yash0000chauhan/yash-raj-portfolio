@@ -48,9 +48,29 @@ export const site = {
   },
 } as const;
 
-export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-  "https://yashrajchauhan.dev";
+const DEFAULT_SITE_URL = "https://yash-raj-portfolio.vercel.app";
+
+function resolveSiteUrl(raw: string | undefined) {
+  const candidate = raw?.trim().replace(/\/$/, "") ?? "";
+
+  try {
+    if (!candidate) {
+      throw new Error("empty site url");
+    }
+
+    const parsed = new URL(candidate);
+    if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
+      throw new Error("unsupported site url protocol");
+    }
+
+    const path = parsed.pathname === "/" ? "" : parsed.pathname.replace(/\/$/, "");
+    return `${parsed.origin}${path}`;
+  } catch {
+    return DEFAULT_SITE_URL;
+  }
+}
+
+export const siteUrl = resolveSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
 
 export const contactForm = {
   headline: "Have an AI problem worth solving?",
