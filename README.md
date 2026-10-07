@@ -47,7 +47,7 @@ No secrets are required to go live. The contact form falls back to mailto using 
 | `src/content/pipelines.ts` | Hero and “How I build” nodes |
 | `src/content/github.ts` | Known public repositories |
 
-MarketEZ is listed as a small card. Case-study fields stay private / unavailable until verified details exist.
+MarketEZ is omitted until verified details exist. Only the Candidate Ranking GitHub repository is linked from projects.
 
 ## Deploy
 

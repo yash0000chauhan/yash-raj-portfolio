@@ -39,10 +39,10 @@ export default function ResumePage() {
             {site.location} · {site.email}
           </p>
           <p className="flex flex-wrap gap-3 text-sm text-sky-300">
-            <a href={site.links.github} target="_blank" rel="noreferrer">
+            <a href={site.links.github} target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
-            <a href={site.links.linkedin} target="_blank" rel="noreferrer">
+            <a href={site.links.linkedin} target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
           </p>

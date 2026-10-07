@@ -1,33 +1,45 @@
 export const heroPipeline = [
   {
-    id: "problem",
-    label: "PROBLEM",
-    short: "PROB",
-    detail: "Name the constraint, the user, and what a working outcome looks like.",
-  },
-  {
     id: "data",
     label: "DATA",
     short: "DATA",
-    detail: "Documents, images, events, or product records — the source the system has to be honest about.",
+    detail:
+      "Documents, images, events, or product records — the source the system has to be honest about.",
   },
   {
     id: "model",
     label: "MODEL",
     short: "MODEL",
-    detail: "Retrieval, a task model, or an LLM — only where the problem needs one.",
+    detail:
+      "The prediction or language layer — only where the problem needs a model.",
+  },
+  {
+    id: "rag",
+    label: "RAG",
+    short: "RAG",
+    detail:
+      "Retrieve the right context before generation so answers stay grounded.",
   },
   {
     id: "api",
     label: "API",
     short: "API",
-    detail: "A stable contract: FastAPI, REST, predictable errors, and something a frontend can call.",
+    detail:
+      "A stable contract: FastAPI, REST, predictable errors, and something a frontend can call.",
+  },
+  {
+    id: "agent",
+    label: "AGENT",
+    short: "AGENT",
+    detail:
+      "Tools and loops that turn a model output into an action, with constraints.",
   },
   {
     id: "product",
     label: "PRODUCT",
     short: "APP",
-    detail: "The interface or workflow people actually use, plus the support loop after it ships.",
+    detail:
+      "The interface or workflow people actually use, plus the support loop after it ships.",
   },
 ] as const;
 

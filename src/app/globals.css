@@ -118,6 +118,11 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
+  :focus-visible {
+    outline: 2px solid color-mix(in oklch, var(--ring) 80%, white);
+    outline-offset: 3px;
+  }
+
   ::selection {
     background: color-mix(in oklch, var(--primary) 32%, transparent);
     color: var(--foreground);
@@ -182,6 +187,18 @@
 @media (prefers-reduced-motion: reduce) {
   .iso-rig {
     transform: none;
+  }
+}
+
+@media print {
+  header,
+  [aria-hidden="true"] {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
   }
 }
 

@@ -60,15 +60,10 @@ export const projects: Project[] = [
     implementation:
       "Documents are uploaded, cleaned, and split into chunks. Each chunk is embedded and stored in a vector index. A query is embedded, nearest neighbors are retrieved, and a QA model reads the evidence to produce an answer with a confidence signal.",
     results:
-      "Delivered as an end-to-end document-to-answer system during the NumeroEins internship. A related public implementation is the lightweight document QA pipeline on GitHub.",
+      "Delivered as an end-to-end document-to-answer system during the NumeroEins internship.",
     lessons:
       "Chunking, embedding choice, and retrieval quality determine whether the reader has enough evidence. A confidence signal is more useful than an answer that looks fluent.",
-    links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/yash0000chauhan/Lightweight-Document-Question-Answering-RAG-Pipeline-in-Python",
-      },
-    ],
+    links: [],
   },
   {
     slug: "visual-qa-agent",
@@ -254,20 +249,6 @@ export const projects: Project[] = [
       "This project does not guarantee legal compliance with DPDPA or any other regulation.",
     ],
     links: [],
-  },
-  {
-    slug: "marketez",
-    number: "08",
-    title: "MarketEZ",
-    category: "AI / E-commerce / Influencer",
-    placeholder: true,
-    summary: "An AI, e-commerce, and influencer product. Further case-study details are private / unavailable.",
-    architecture: [],
-    technologies: ["AI", "E-commerce", "Influencer"],
-    links: [],
-    notes: [
-      "Verified MarketEZ details are not in this repository. Case-study fields are private / unavailable.",
-    ],
   },
 ];
 
