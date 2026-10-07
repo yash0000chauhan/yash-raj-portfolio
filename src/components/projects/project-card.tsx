@@ -60,33 +60,33 @@ export function ProjectCard({ project }: { project: Project }) {
           </p>
         ) : null}
         <div className="mt-6 flex flex-wrap items-center gap-3">
-          {project.placeholder ? (
-            <Link
-              href={`/projects/${project.slug}`}
-              className="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-white"
+          <Button
+            type="button"
+            variant="outline"
+            className="rounded-full border-white/12"
+            onClick={() => setOpen(true)}
+          >
+            Case study
+          </Button>
+          <Link
+            href={`/projects/${project.slug}`}
+            className="inline-flex items-center gap-1 text-sm text-zinc-300 hover:text-white focus-visible:ring-2 focus-visible:ring-sky-300/50 focus-visible:outline-none"
+          >
+            Open page
+            <ArrowUpRight className="size-3.5" />
+          </Link>
+          {project.links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm text-sky-300 hover:text-sky-200 focus-visible:ring-2 focus-visible:ring-sky-300/50 focus-visible:outline-none"
             >
-              Open page
+              {link.label}
               <ArrowUpRight className="size-3.5" />
-            </Link>
-          ) : (
-            <>
-              <Button
-                type="button"
-                variant="outline"
-                className="rounded-full border-white/12"
-                onClick={() => setOpen(true)}
-              >
-                Case study
-              </Button>
-              <Link
-                href={`/projects/${project.slug}`}
-                className="inline-flex items-center gap-1 text-sm text-zinc-300 hover:text-white"
-              >
-                Open page
-                <ArrowUpRight className="size-3.5" />
-              </Link>
-            </>
-          )}
+            </a>
+          ))}
         </div>
       </article>
 

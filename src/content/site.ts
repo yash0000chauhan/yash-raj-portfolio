@@ -61,7 +61,7 @@ export const site = {
     { id: "contact", label: "Contact", href: "/#contact" },
   ],
   seo: {
-    title: "Yash Raj Chauhan — Software Engineer & AI Engineer",
+    title: "Yash Raj Chauhan — Software Engineer / AI Engineer",
     titleTemplate: "%s · Yash Raj Chauhan",
     description:
       "Software Engineer and AI Engineer in Pune building full-stack web apps, backend APIs, automation, and AI systems — from problem to production.",

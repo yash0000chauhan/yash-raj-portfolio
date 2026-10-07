@@ -144,7 +144,7 @@ export function Contact() {
                   <a
                     href={site.links.linkedin}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="text-sky-300 hover:text-sky-200"
                   >
                     LinkedIn
@@ -154,7 +154,7 @@ export function Contact() {
                   <a
                     href={site.links.github}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="text-sky-300 hover:text-sky-200"
                   >
                     GitHub

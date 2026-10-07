@@ -16,14 +16,14 @@ export function GithubSection() {
           <a
             href={githubShowcase.profile}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-sky-300 hover:text-sky-200"
           >
             github.com/{githubShowcase.handle}
             <ArrowUpRight className="size-3.5" />
           </a>
         </Reveal>
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
+        <div className="mt-8 grid gap-4 md:max-w-xl md:grid-cols-1">
           {githubShowcase.repos.map((repo) => (
             <Reveal key={repo.name}>
               <article className="h-full rounded-3xl border border-white/8 bg-white/[0.03] p-5">
@@ -37,7 +37,7 @@ export function GithubSection() {
                 <a
                   href={repo.href}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center gap-1 text-sm text-zinc-300 hover:text-white"
                 >
                   View repository

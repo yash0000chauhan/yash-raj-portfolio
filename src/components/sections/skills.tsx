@@ -8,7 +8,7 @@ export function Skills() {
         <SectionHeading
           eyebrow="Skills"
           title="A working stack, not a percentage chart."
-          description="Grouped by how I use them. No skill bars or invented proficiency scores."
+          description="Grouped by how I use them. No skill bars, percentages, or invented proficiency scores."
         />
         <div className="mt-12 grid gap-4 md:grid-cols-2">
           {skillGroups.map((group, index) => (

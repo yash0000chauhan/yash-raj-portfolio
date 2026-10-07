@@ -88,7 +88,7 @@ export function ProjectCaseStudy({
               key={link.href}
               href={link.href}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-sm text-sky-300 hover:text-sky-200"
             >
               {link.label}

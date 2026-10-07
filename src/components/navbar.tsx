@@ -60,8 +60,9 @@ export function Navbar() {
               <a
                 key={item.id}
                 href={item.href}
+                aria-current={active === item.id ? "location" : undefined}
                 className={cn(
-                  "rounded-full px-3 py-1.5 text-[13px] tracking-wide transition-colors",
+                  "rounded-full px-3 py-1.5 text-[13px] tracking-wide transition-colors focus-visible:ring-2 focus-visible:ring-sky-300/50 focus-visible:outline-none",
                   active === item.id
                     ? "bg-white/8 text-zinc-50"
                     : "text-zinc-400 hover:text-zinc-100"
@@ -87,7 +88,7 @@ export function Navbar() {
               variant="ghost"
               size="icon-sm"
               nativeButton={false}
-              render={<a href={site.links.github} target="_blank" rel="noreferrer" />}
+              render={<a href={site.links.github} target="_blank" rel="noopener noreferrer" />}
               aria-label="GitHub"
               className="text-zinc-300"
             >
@@ -98,7 +99,7 @@ export function Navbar() {
               size="icon-sm"
               nativeButton={false}
               render={
-                <a href={site.links.linkedin} target="_blank" rel="noreferrer" />
+                <a href={site.links.linkedin} target="_blank" rel="noopener noreferrer" />
               }
               aria-label="LinkedIn"
               className="text-zinc-300"

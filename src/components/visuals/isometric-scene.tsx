@@ -2,9 +2,10 @@
 
 import {
   AppWindow,
+  Bot,
   Brain,
-  CircleAlert,
   Database,
+  ScanSearch,
   Server,
 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -13,7 +14,7 @@ import { heroPipeline } from "@/content/pipelines";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 import { cn } from "@/lib/utils";
 
-const icons = [CircleAlert, Database, Brain, Server, AppWindow] as const;
+const icons = [Database, Brain, ScanSearch, Server, Bot, AppWindow] as const;
 
 type IsometricSceneProps = {
   active: number;
@@ -67,7 +68,7 @@ export function IsometricScene({ active, onSelect }: IsometricSceneProps) {
               onFocus={() => onSelect(index)}
               onClick={() => onSelect(index)}
               className={cn(
-                "iso-node flex w-[72px] shrink-0 flex-col items-center gap-1.5 rounded-xl border px-2 py-3",
+                "iso-node flex w-[62px] shrink-0 flex-col items-center gap-1.5 rounded-xl border px-1.5 py-3 sm:w-[68px]",
                 isActive
                   ? "border-sky-300/45 bg-sky-400/16"
                   : "border-white/10 bg-zinc-900/92"

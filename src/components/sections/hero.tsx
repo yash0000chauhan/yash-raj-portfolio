@@ -3,8 +3,8 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDownRight, FileDown } from "lucide-react";
 
+import { AiSystemsCore } from "@/components/3d/ai-systems-core";
 import { Button } from "@/components/ui/button";
-import { HeroPipeline } from "@/components/visuals/hero-pipeline";
 import { site } from "@/content/site";
 
 export function Hero() {
@@ -101,7 +101,7 @@ export function Hero() {
             </Button>
           </motion.div>
         </div>
-        <HeroPipeline />
+        <AiSystemsCore />
       </div>
     </section>
   );
