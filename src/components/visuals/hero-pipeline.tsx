@@ -3,11 +3,10 @@
 import { motion, useReducedMotion } from "framer-motion";
 import {
   AppWindow,
-  Bot,
   Brain,
+  CircleAlert,
   Database,
-  Eye,
-  Workflow,
+  Server,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -15,7 +14,7 @@ import { IsometricScene } from "@/components/visuals/isometric-scene";
 import { heroPipeline } from "@/content/pipelines";
 import { cn } from "@/lib/utils";
 
-const icons = [Database, Workflow, Eye, Brain, Bot, AppWindow] as const;
+const icons = [CircleAlert, Database, Brain, Server, AppWindow] as const;
 
 export function HeroPipeline() {
   const reduced = useReducedMotion();

@@ -2,11 +2,10 @@
 
 import {
   AppWindow,
-  Bot,
   Brain,
+  CircleAlert,
   Database,
-  Eye,
-  Workflow,
+  Server,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -14,7 +13,7 @@ import { heroPipeline } from "@/content/pipelines";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 import { cn } from "@/lib/utils";
 
-const icons = [Database, Workflow, Eye, Brain, Bot, AppWindow] as const;
+const icons = [CircleAlert, Database, Brain, Server, AppWindow] as const;
 
 type IsometricSceneProps = {
   active: number;

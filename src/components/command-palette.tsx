@@ -1,6 +1,6 @@
 "use client";
 
-import { Briefcase, FolderGit2, Mail, Sparkles, User } from "lucide-react";
+import { Briefcase, FileText, FolderGit2, Mail, Sparkles, User } from "lucide-react";
 
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { useEffect, useState } from "react";
@@ -93,6 +93,18 @@ export function CommandPalette() {
           >
             <LinkedInIcon className="size-4" />
             LinkedIn
+          </CommandItem>
+          <CommandItem
+            value="Resume"
+            onSelect={() => {
+              setOpen(false);
+              window.setTimeout(() => {
+                window.location.assign(site.links.resume);
+              }, 80);
+            }}
+          >
+            <FileText className="size-4" />
+            Resume
           </CommandItem>
         </CommandGroup>
       </CommandList>

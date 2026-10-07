@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+import { site } from "@/content/site";
+
 type Payload = {
   name?: string;
   email?: string;
@@ -35,7 +37,9 @@ export async function POST(request: Request) {
   }
 
   const destination =
-    process.env.CONTACT_EMAIL || process.env.NEXT_PUBLIC_CONTACT_EMAIL || "";
+    process.env.CONTACT_EMAIL?.trim() ||
+    process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() ||
+    site.email;
   const composed = [
     `Name: ${name}`,
     `Email: ${email}`,

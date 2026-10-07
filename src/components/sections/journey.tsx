@@ -7,9 +7,9 @@ export function Journey() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Journey"
-          title="Internships → Freelance → AI Projects → Startup / Product → Equity Partner"
+          title="Education → Brandzzy → NumeroEins → Antler / Pookii.io"
         />
-        <ol className="mt-12 grid gap-4 md:grid-cols-5">
+        <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {journey.map((step, index) => (
             <Reveal as="li" key={step.id} delay={index * 0.04}>
               <article className="h-full rounded-3xl border border-white/8 bg-white/[0.03] p-4">

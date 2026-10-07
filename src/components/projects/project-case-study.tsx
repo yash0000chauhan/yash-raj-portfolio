@@ -40,9 +40,7 @@ export function ProjectCaseStudy({
 
       {project.placeholder ? (
         <p className="rounded-2xl border border-dashed border-white/12 bg-white/[0.02] p-4 text-sm text-zinc-500">
-          Verified MarketEZ details are not in this repository yet. Update{" "}
-          <code className="text-zinc-300">src/content/projects.ts</code> when
-          they are ready to publish.
+          Case-study details are private / unavailable.
         </p>
       ) : null}
 
@@ -61,7 +59,7 @@ export function ProjectCaseStudy({
       {project.technologies.length > 0 ? (
         <section>
           <h3 className="mb-2 text-[11px] tracking-[0.22em] text-sky-300/80 uppercase">
-            Technologies
+            Technology
           </h3>
           <div className="flex flex-wrap gap-1.5">
             {project.technologies.map((tech) => (

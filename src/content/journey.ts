@@ -1,32 +1,26 @@
 export const journey = [
   {
-    id: "internships",
-    title: "Internships",
+    id: "education",
+    title: "Education",
     description:
-      "AI engineering at NumeroEins and web development & support at Brandzzy SoftTech — shipping systems and supporting products in real environments.",
+      "B.Tech CSE at Symbiosis Institute of Technology, Pune, 2022–2026.",
   },
   {
-    id: "freelance",
-    title: "Freelance",
+    id: "brandzzy",
+    title: "Brandzzy SoftTech",
     description:
-      "Project-based AI engineering: applications, RAG, automation, vision, document processing, and APIs.",
+      "Web Development & Support Intern — production support, incidents, testing, monitoring, debugging, and deployment.",
   },
   {
-    id: "ai-projects",
-    title: "AI Projects",
+    id: "numeroeins",
+    title: "NumeroEins",
     description:
-      "Question answering, visual agents, computer vision, ranking, privacy backends, and LLM adaptation — built as working systems.",
+      "AI Engineer Intern — Python backends, REST, LLM, RAG, LangChain, embeddings, vector search, and FastAPI.",
   },
   {
-    id: "startup-product",
-    title: "Startup / Product",
+    id: "pookii",
+    title: "Antler — Pookii.io",
     description:
-      "Product and engineering work inside startup contexts, including architecture and implementation, not only isolated experiments.",
-  },
-  {
-    id: "equity-partner",
-    title: "Equity Partner",
-    description:
-      "Equity-partner role on Antler-related startup work, contributing to product, AI engineering, architecture, and implementation.",
+      "Technical Consultant, Full-Stack & AI Developer — features, APIs, databases, and AI workflows on Pookii.io.",
   },
 ] as const;

@@ -9,8 +9,8 @@ export function Experience() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Experience"
-          title="Roles that shipped systems, not just slides."
-          description="A mix of internship, freelance, product, and equity-partner work. Commercial terms, ownership, and unpublished client names are omitted on purpose."
+          title="Internships and current product work."
+          description="Three roles with published titles, dates, and the work I actually did. Metrics, ownership, and unpublished commercial details are omitted."
         />
         <ol className="relative mt-12 space-y-6 before:absolute before:top-2 before:bottom-2 before:left-[11px] before:w-px before:bg-white/8 sm:before:left-[15px]">
           {experience.map((item, index) => (

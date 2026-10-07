@@ -110,27 +110,37 @@ export function Contact() {
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="space-y-4">
-            {publicEmail ? (
-              <div className="rounded-3xl border border-white/8 bg-white/[0.03] p-5">
-                <p className="text-xs tracking-[0.2em] text-zinc-500 uppercase">
-                  Email
-                </p>
-                <p className="mt-2 text-zinc-100">{publicEmail}</p>
+            <div className="rounded-3xl border border-white/8 bg-white/[0.03] p-5">
+              <p className="text-xs tracking-[0.2em] text-zinc-500 uppercase">
+                Email
+              </p>
+              <p className="mt-2 text-zinc-100">{publicEmail}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
                 <Button
                   type="button"
                   variant="outline"
-                  className="mt-4 rounded-full"
+                  className="rounded-full"
                   onClick={copyEmail}
                 >
                   {copied ? <Check /> : <Copy />}
                   Copy email
                 </Button>
+                <Button
+                  variant="outline"
+                  className="rounded-full"
+                  nativeButton={false}
+                  render={<a href={`mailto:${publicEmail}`} />}
+                >
+                  Write email
+                </Button>
               </div>
-            ) : (
-              <div className="rounded-3xl border border-white/8 bg-white/[0.03] p-5">
-                <p className="text-sm leading-relaxed text-zinc-300">
-                  A public email is not configured in this environment. Use the
-                  form (mailto fallback), or write on{" "}
+            </div>
+            <div className="rounded-3xl border border-white/8 bg-white/[0.03] p-5">
+              <p className="text-xs tracking-[0.2em] text-zinc-500 uppercase">
+                Also
+              </p>
+              <ul className="mt-3 space-y-2 text-sm">
+                <li>
                   <a
                     href={site.links.linkedin}
                     target="_blank"
@@ -139,15 +149,19 @@ export function Contact() {
                   >
                     LinkedIn
                   </a>
-                  .
-                </p>
-              </div>
-            )}
-            <p className="text-xs text-zinc-600">
-              Set <code>NEXT_PUBLIC_CONTACT_EMAIL</code> and optionally{" "}
-              <code>RESEND_API_KEY</code> on the server. No secrets ship in the
-              browser.
-            </p>
+                </li>
+                <li>
+                  <a
+                    href={site.links.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sky-300 hover:text-sky-200"
+                  >
+                    GitHub
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <form

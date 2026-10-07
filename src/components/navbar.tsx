@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu } from "lucide-react";
+import { FileText, Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { CommandPalette } from "@/components/command-palette";
@@ -77,6 +77,16 @@ export function Navbar() {
               variant="ghost"
               size="icon-sm"
               nativeButton={false}
+              render={<a href={site.links.resume} />}
+              aria-label="Resume"
+              className="text-zinc-300"
+            >
+              <FileText className="size-4" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon-sm"
+              nativeButton={false}
               render={<a href={site.links.github} target="_blank" rel="noreferrer" />}
               aria-label="GitHub"
               className="text-zinc-300"
@@ -94,6 +104,14 @@ export function Navbar() {
               className="text-zinc-300"
             >
               <LinkedInIcon className="size-4" />
+            </Button>
+            <Button
+              size="sm"
+              className="hidden rounded-full px-3 lg:inline-flex"
+              nativeButton={false}
+              render={<a href={site.ctas.startProject.href} />}
+            >
+              {site.ctas.startProject.label}
             </Button>
 
             <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
@@ -137,6 +155,28 @@ export function Navbar() {
                       {item.label}
                     </SheetClose>
                   ))}
+                  <SheetClose
+                    nativeButton={false}
+                    render={
+                      <a
+                        href={site.links.resume}
+                        className="rounded-lg px-3 py-3 text-base text-zinc-300"
+                      />
+                    }
+                  >
+                    Resume
+                  </SheetClose>
+                  <SheetClose
+                    nativeButton={false}
+                    render={
+                      <a
+                        href={site.ctas.startProject.href}
+                        className="rounded-lg px-3 py-3 text-base text-zinc-100"
+                      />
+                    }
+                  >
+                    {site.ctas.startProject.label}
+                  </SheetClose>
                 </nav>
               </SheetContent>
             </Sheet>

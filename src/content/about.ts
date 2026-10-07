@@ -1,36 +1,39 @@
 export const about = {
   eyebrow: "About",
-  title: "AI systems, from pipeline to product.",
+  title: "Software engineer across web, APIs, and AI systems.",
   body: [
-    "I am an AI Engineer working across Generative AI, machine learning, computer vision, intelligent automation, and backend systems. I take problems from model and data pipelines through APIs and automation into products that can actually be used.",
-    "The through-line is production, not notebooks: retrieval that finds the right context, models that are constrained by that context, and interfaces or services that operators can run.",
+    "I build and support full-stack web applications, backend APIs, REST services, automation, and AI apps. Day-to-day work covers backend, frontend integration, API design, debugging, testing, deployment, and production support.",
+    "The stack I use most is Python, FastAPI, React, SQL, Docker, Git, and Linux/macOS. I am also interested in cloud, DevOps, distributed systems, and open source.",
   ],
+  education: {
+    degree: "B.Tech, Computer Science and Engineering",
+    school: "Symbiosis Institute of Technology, Pune",
+    period: "2022–2026",
+  },
+  location: "Pune, India",
   roles: [
     {
-      title: "AI Engineering Intern",
-      detail: "NumeroEins — question answering and retrieval systems.",
+      title: "Technical Consultant – Full-Stack & AI Developer",
+      detail: "Antler — Pookii.io. Full-stack features, APIs, databases, and AI workflows on Pookii.io.",
     },
     {
-      title: "Freelance AI Engineer / Developer",
-      detail: "Project-based AI applications, RAG, automation, vision, and APIs.",
+      title: "AI Engineer Intern",
+      detail: "NumeroEins, Pune. Python backends, REST, LLM, RAG, LangChain, embeddings, and FastAPI.",
     },
     {
-      title: "Startup / Product Engineer",
-      detail: "Product and engineering work inside startup contexts.",
-    },
-    {
-      title: "Equity Partner",
+      title: "Web Development & Support Intern",
       detail:
-        "AI, product, and engineering contribution on Antler-related startup work.",
+        "Brandzzy SoftTech Pvt. Ltd., remote. Production support, incidents, testing, monitoring, debugging, and deployment.",
     },
   ],
   focus: [
-    "Generative AI",
-    "RAG",
-    "AI Agents",
-    "Computer Vision",
-    "Document AI",
+    "Full-stack web apps",
+    "Backend APIs",
+    "REST",
     "Automation",
-    "Backend systems",
+    "AI applications",
+    "Testing & debugging",
+    "Deployment",
+    "Production support",
   ],
 };

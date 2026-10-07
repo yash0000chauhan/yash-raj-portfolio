@@ -1,93 +1,83 @@
 export const heroPipeline = [
   {
-    id: "user-data",
-    label: "USER / DATA",
+    id: "problem",
+    label: "PROBLEM",
+    short: "PROB",
+    detail: "Name the constraint, the user, and what a working outcome looks like.",
+  },
+  {
+    id: "data",
+    label: "DATA",
     short: "DATA",
-    detail:
-      "The source of truth — people, documents, images, events, and product signals.",
+    detail: "Documents, images, events, or product records — the source the system has to be honest about.",
   },
   {
-    id: "ai-pipeline",
-    label: "AI PIPELINE",
-    short: "PIPE",
-    detail:
-      "Ingestion, cleaning, and orchestration that make raw input usable by models.",
+    id: "model",
+    label: "MODEL",
+    short: "MODEL",
+    detail: "Retrieval, a task model, or an LLM — only where the problem needs one.",
   },
   {
-    id: "retrieval",
-    label: "RETRIEVAL / VISION / NLP",
-    short: "SEE",
-    detail:
-      "Search, perception, and language understanding before generation starts.",
+    id: "api",
+    label: "API",
+    short: "API",
+    detail: "A stable contract: FastAPI, REST, predictable errors, and something a frontend can call.",
   },
   {
-    id: "llm",
-    label: "LLM / MODEL",
-    short: "LLM",
-    detail:
-      "The reasoning or prediction layer — language, vision, or a task-specific model.",
-  },
-  {
-    id: "agent",
-    label: "AGENT / AUTOMATION",
-    short: "AGENT",
-    detail: "Tools, loops, and workflows that turn a model output into an action.",
-  },
-  {
-    id: "production",
-    label: "PRODUCTION APP",
+    id: "product",
+    label: "PRODUCT",
     short: "APP",
-    detail: "APIs, interfaces, and monitoring — the system people actually use.",
+    detail: "The interface or workflow people actually use, plus the support loop after it ships.",
   },
 ] as const;
 
 export const buildPipeline = [
   {
-    id: "data",
-    label: "DATA",
+    id: "understand",
+    label: "UNDERSTAND",
     detail:
-      "Define the source: documents, images, profiles, events, or product logs. The pipeline is only as honest as this layer.",
+      "Clarify the problem, constraints, data, and what done looks like before choosing tools.",
   },
   {
-    id: "preprocessing",
-    label: "PREPROCESSING",
+    id: "architecture",
+    label: "ARCHITECTURE",
     detail:
-      "Clean, normalize, chunk, or enhance. Most downstream failures start here, not in the model.",
+      "Choose the system shape — services, data, and where an AI layer belongs — before writing the first endpoint.",
   },
   {
-    id: "embeddings",
-    label: "EMBEDDINGS / VISION / NLP",
+    id: "backend",
+    label: "BACKEND / API",
     detail:
-      "Represent the world in a form a model can search or classify — vectors, features, or tokens.",
+      "FastAPI and REST contracts, data models, and the backend other layers integrate with.",
   },
   {
-    id: "retrieval",
-    label: "RETRIEVAL / MODEL",
+    id: "ai-layer",
+    label: "AI LAYER",
     detail:
-      "Find the right evidence or run the task model. Retrieval quality usually beats a larger generator.",
+      "RAG, embeddings, models, or agents when the problem needs them — constrained by retrieved context.",
   },
   {
-    id: "llm-agent",
-    label: "LLM / AGENT",
+    id: "frontend",
+    label: "FRONTEND",
     detail:
-      "Reason, decide, or act with constraints. Agents get tools; they do not get unlimited freedom.",
+      "React surfaces that call the API and make the system usable for a person.",
   },
   {
-    id: "api",
-    label: "API",
+    id: "test",
+    label: "TEST",
     detail:
-      "Expose the capability as a stable contract — FastAPI, REST, auth, and predictable errors.",
+      "Debug and test the path end to end before calling the work finished.",
   },
   {
-    id: "application",
-    label: "APPLICATION",
+    id: "deploy",
+    label: "DEPLOY",
     detail:
-      "Put the system in front of a person: dashboards, products, and operator workflows.",
+      "Package and ship with Docker and the deployment steps the environment needs.",
   },
   {
-    id: "monitoring",
-    label: "MONITORING",
+    id: "iterate",
+    label: "ITERATE",
     detail:
-      "Watch latency, failures, and answer quality after launch. A pipeline that cannot be observed is not finished.",
+      "Use failures, monitoring, and production support to tighten the next pass.",
   },
 ] as const;

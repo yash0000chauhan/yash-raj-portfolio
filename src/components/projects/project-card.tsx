@@ -21,7 +21,13 @@ export function ProjectCard({ project }: { project: Project }) {
 
   return (
     <>
-      <article className="group relative overflow-hidden rounded-3xl border border-white/8 bg-white/[0.03] p-6 transition-colors hover:border-sky-300/25 hover:bg-white/[0.05] sm:p-7">
+      <article
+        className={
+          project.placeholder
+            ? "group relative overflow-hidden rounded-3xl border border-dashed border-white/10 bg-white/[0.02] p-5 sm:p-6"
+            : "group relative overflow-hidden rounded-3xl border border-white/8 bg-white/[0.03] p-6 transition-colors hover:border-sky-300/25 hover:bg-white/[0.05] sm:p-7"
+        }
+      >
         <div
           aria-hidden
           className="pointer-events-none absolute -top-16 -right-10 size-40 rounded-full bg-indigo-500/10 blur-3xl transition-opacity group-hover:opacity-100"
@@ -34,29 +40,53 @@ export function ProjectCard({ project }: { project: Project }) {
             {project.category}
           </p>
         </div>
-        <h3 className="mt-4 text-xl font-semibold tracking-[-0.02em] text-zinc-50 sm:text-2xl">
+        <h3
+          className={
+            project.placeholder
+              ? "mt-3 text-lg font-semibold tracking-[-0.02em] text-zinc-100"
+              : "mt-4 text-xl font-semibold tracking-[-0.02em] text-zinc-50 sm:text-2xl"
+          }
+        >
           {project.title}
         </h3>
         <p className="mt-3 text-sm leading-relaxed text-zinc-300">
           {project.summary}
         </p>
-        <ArchitectureFlow steps={project.architecture} />
+        {project.architecture.length > 0 ? (
+          <ArchitectureFlow steps={project.architecture} />
+        ) : project.placeholder ? (
+          <p className="mt-4 text-xs text-zinc-500">
+            Case-study details are private / unavailable.
+          </p>
+        ) : null}
         <div className="mt-6 flex flex-wrap items-center gap-3">
-          <Button
-            type="button"
-            variant="outline"
-            className="rounded-full border-white/12"
-            onClick={() => setOpen(true)}
-          >
-            Case study
-          </Button>
-          <Link
-            href={`/projects/${project.slug}`}
-            className="inline-flex items-center gap-1 text-sm text-zinc-300 hover:text-white"
-          >
-            Open page
-            <ArrowUpRight className="size-3.5" />
-          </Link>
+          {project.placeholder ? (
+            <Link
+              href={`/projects/${project.slug}`}
+              className="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-white"
+            >
+              Open page
+              <ArrowUpRight className="size-3.5" />
+            </Link>
+          ) : (
+            <>
+              <Button
+                type="button"
+                variant="outline"
+                className="rounded-full border-white/12"
+                onClick={() => setOpen(true)}
+              >
+                Case study
+              </Button>
+              <Link
+                href={`/projects/${project.slug}`}
+                className="inline-flex items-center gap-1 text-sm text-zinc-300 hover:text-white"
+              >
+                Open page
+                <ArrowUpRight className="size-3.5" />
+              </Link>
+            </>
+          )}
         </div>
       </article>
 

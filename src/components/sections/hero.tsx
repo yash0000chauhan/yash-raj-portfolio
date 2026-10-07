@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDownRight } from "lucide-react";
+import { ArrowDownRight, FileDown } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { HeroPipeline } from "@/components/visuals/hero-pipeline";
@@ -69,7 +69,7 @@ export function Hero() {
             initial={reduced ? false : { opacity: 1, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.12 }}
-            className="mt-8 flex flex-col gap-3 sm:flex-row"
+            className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
           >
             <Button
               size="lg"
@@ -79,6 +79,16 @@ export function Hero() {
             >
               {site.ctas.work.label}
               <ArrowDownRight />
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="h-11 rounded-full border-white/12 bg-white/[0.03] px-5"
+              nativeButton={false}
+              render={<a href={site.ctas.resume.href} />}
+            >
+              <FileDown />
+              {site.ctas.resume.label}
             </Button>
             <Button
               size="lg"

@@ -1,14 +1,14 @@
 "use client";
 
 import {
-  Activity,
   AppWindow,
   Brain,
-  Database,
-  Eye,
+  Bug,
+  Container,
+  RefreshCw,
   ScanSearch,
   Server,
-  WandSparkles,
+  Workflow,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -16,26 +16,26 @@ import { buildPipeline } from "@/content/pipelines";
 import { cn } from "@/lib/utils";
 
 const icons = [
-  Database,
-  WandSparkles,
-  Eye,
   ScanSearch,
-  Brain,
+  Workflow,
   Server,
+  Brain,
   AppWindow,
-  Activity,
+  Bug,
+  Container,
+  RefreshCw,
 ] as const;
 
 export function BuildPipeline() {
   const [active, setActive] = useState(0);
   const node = buildPipeline[active];
-  const Icon = icons[active] ?? Database;
+  const Icon = icons[active] ?? ScanSearch;
 
   return (
     <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
       <ol className="grid grid-cols-2 gap-2 sm:grid-cols-4">
         {buildPipeline.map((item, index) => {
-          const NodeIcon = icons[index] ?? Database;
+          const NodeIcon = icons[index] ?? ScanSearch;
           return (
             <li key={item.id}>
               <button
